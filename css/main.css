@@ -1,0 +1,153 @@
+html, body{
+    width:  1920px;
+    height: 1080px;
+    left: 0px; 
+    right: 0px; 
+    top: 0px; 
+    bottom: 0px; 
+    margin: auto; 
+    overflow: hidden; 
+    position: fixed; 
+}
+.main_p{
+    width: 100%;
+    height: 100%;
+    background : url("../img/Background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    animation: main_opacity 2s ;
+    animation-timing-function:ease-in;
+}
+@keyframes main_opacity{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+@keyframes main_opacity2{
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+
+.draw{
+    width:  1920px;
+    height: 1080px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.clickEffect{
+    position:fixed;
+    box-sizing:border-box;
+    border-style:solid;
+    border-color: rgb(202, 246, 130);
+    border-radius:50%;
+    animation:clickEffect 2s ease-out;
+    z-index:100;
+}
+@keyframes clickEffect{
+    0%{
+        opacity:1;
+        width:0.5em; height:0.5em;
+        margin:-0.25em;
+        border-width:0.2em;
+    }
+    100%{
+        opacity:0.2;
+        width:30em; height:30em;
+        margin:-15em;
+        border-width:0.01em;
+    }
+}
+
+.up_bracket{
+    width: 470px;
+    height: 86px;
+    background : url("../img/Frame_Top.png");
+    background-repeat: no-repeat;
+    position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 64px;
+    left: 725px;
+    overflow: hidden;
+}
+.down_bracket{
+    width: 470px;
+    height: 86px;
+    background : url("../img/Frame_Bottom.png");
+    background-repeat: no-repeat;
+    position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 930px;
+    left: 725px;
+    overflow: hidden;
+}
+.logo_bracket{
+    width: 1181px;
+    height: 319px;
+    background : url("../img/LogoImg.png");
+    background-repeat: no-repeat;
+    position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 370px;
+    left: 376px;
+    overflow: hidden;
+    animation: logo_size 2s ;
+}
+@keyframes logo_size{
+    from{
+        transform: scale(2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.click_start{
+    width: 447px;
+    height: 68px;
+    background : url("../img/Button.png");
+    background-repeat: no-repeat;
+    position: center center;
+    background-size: cover;
+    opacity: 0;
+    position: absolute;
+    top: 737px;
+    left: 730px;
+    overflow: hidden;
+    animation-delay: 5s;
+    animation: start_button_blink 1.2s infinite alternate;
+    animation-timing-function:ease-out;
+    z-index: 300;
+}
+@keyframes start_button_blink{
+    from{
+        opacity: 0.7;
+      }
+      
+    to{
+        opacity: 0;
+    }
+}
+
+
+
