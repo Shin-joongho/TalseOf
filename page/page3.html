@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <link href="../css/page3.css" rel="stylesheet"/>
+        <title>Tales-Of-BRiLLiANT STAGE</title>
+    </head>
+    <body>
+    <meta charset="utf-8">
+        <div class="top_bar"></div>
+        <nav class="sidebar">
+            <img src="../img/page1_img/page_logo.png" onclick="move_p('../index.html')"></img>
+            <p class="nav_p">
+                <span class="illust_p">Illust</span>
+                <span style="font-weight: lighter; padding-left: 5px; padding-right: 5px;">|</span>
+                <span class="spread-underline" onclick="move_p('./thanks.html')">Thanks</span>
+            </p>
+        </nav>
+        <div class="back_div" onclick="Move_Top()">
+            <img class="semo">
+            <a class="back_font">Back to Top</a>
+        </div>
+        <div class="list_box">
+            <ul>
+                <div  class="arco">
+                    <h2 onclick="move_p('./page1.html')">Page 1</h2>
+                    <div class="accordion_content">
+                        <li class="phanta" onclick="move_p('./page1.html')"><img class = "li_first">TALES OF PHANTASIA</li>
+                        <li class="destiny" onclick="move_p('./page1.html#tag1')"><img class = "li_sec">TALES OF DESTINY</li>
+                        <li class="symphony" onclick="move_p('./page1.html#tag2')"><img class = "li_third">TALES OF SYMPHONIA</li>
+                        <li class="abyss" onclick="move_p('./page1.html#tag3')"><img class = "li_forth">TALES OF THE ABYSS</li>
+                    </div>
+                </div>
+                
+                <div class="arco">
+                    <h2 onclick="move_p('./page2.html')">Page 2</h2>
+                    <div class="accordion_content">
+                        <li class="inno" onclick="move_p('./page2.html')"><img class = "li_fifth">TALES OF INNOCENCE</li>
+                        <li class="vesperia" onclick="move_p('./page2.html#tag1')"><img class = "li_sixth">TALES OF VESPERIA</li>
+                        <li class="hearts" onclick="move_p('./page2.html#tag2')"><img class = "li_seventh">TALES OF HEARTS</li>
+                        
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <h2>Page 3</h2>
+                    <img class="list_semo">
+                </div>
+                <li class="xillia" onclick="Move_Top()"><img class = "li_eighth">TALES OF XILLIA</li>
+                <li class="zestiria" onclick="location.href='#tag1'"><img class = "li_ninth">TALES OF ZESTIRIA</li>
+                <li class="berseria" onclick="location.href='#tag2'"><img class = "li_tenth">TALES OF BERSERIA</li>
+            </ul>
+        </div>
+        <div>
+            <div class="f1"></div>
+            <div id="tag1"></div>
+            <div class="f2"></div>
+            <div class="f3"></div>
+            <div class="f4"></div>
+            <div class="f5"></div>
+            <div class="f6"></div>
+            <div class="f7"></div>
+            <div class="f8" ></div>
+            <div class="f9"></div>
+            <div class="f10"></div>
+            <div class="f11"></div>
+            <div class="f12"></div>
+            <div class="f13" ></div>
+            <div id="tag2"></div>
+            <div class="f14"></div>
+        </div>
+        <div class="wrap">
+            <i class="arrow left" role="img" onclick="move_p('./page2.html')"></i>
+            <p onclick="move_p('./page1.html')">1</p>
+            <p class="line">|</p>
+            <p onclick="move_p('./page2.html')">2</p>
+            <p class="line">|</p>
+            <p class="page_now">3</p>
+            <i class="arrow right" role="img"></i>
+        </div>
+        <script>
+            function move_p(a)
+            {
+                var fade = document.querySelector("body");
+                fade.style.animation = "index_page2 1.5s";
+                setTimeout(function(){location.href=a;}, 1400);
+                
+            }
+            function Move_Top()
+            {
+                window.scrollTo({top: 0})
+            }
+            function clickEffect(e){
+                var d=document.createElement("div");
+                d.className="clickEffect";
+                d.style.top=e.clientY+"px";
+                d.style.left=e.clientX+"px";
+                var dr = document.querySelector("body");
+                dr.appendChild(d);
+                d.addEventListener('animationend',function(){d.parentElement.removeChild(d);}.bind(this));
+            }
+            document.addEventListener('click',clickEffect);
+    
+        </script>
+    </body>
+</html>

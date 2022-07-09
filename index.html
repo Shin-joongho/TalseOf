@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./css/main.css" rel="stylesheet"/>
+        <title>Tales-Of-BRiLLiANT STAGE</title>
+    </head>
+    <script>
+        function page_move()
+        {
+            console.log("111");
+            var fade = document.querySelector(".main_p");
+            fade.style.animation = "main_opacity2 2s";
+            setTimeout(function(){location.href="./page/page1.html";}, 1700);
+            
+        }
+        function clickEffect(e){
+            var d=document.createElement("div");
+            d.className="clickEffect";
+            d.style.top=e.clientY+"px";
+            d.style.left=e.clientX+"px";
+            var dr = document.querySelector(".draw");
+            dr.appendChild(d);
+            d.addEventListener('animationend',function(){d.parentElement.removeChild(d);}.bind(this));
+        }
+        document.addEventListener('click',clickEffect);
+    </script>
+    <body  onclick=page_move()>
+        <div class = "draw"></div>
+        <div class = "main_p">
+            <div class = "up_bracket"></div>
+            <div class = "logo_bracket"></div>
+            <div class = "down_bracket"></div>
+            <div class = "click_start" alt="Error"></div>
+        </div>
+    </body>
+
+
+</html>
